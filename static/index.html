@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I AM SOME HTML</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function getArea(){
+			var request = new XMLHttpRequest();
+			request.open('GET', '/area?number=' + number.value , true);
+
+			request.onload = function() {
+			    result.innerHTML="result: " + (request.responseText);
+			    console.log(request);		
+			};
+			request.send();
+		}
+
+</script>
+<h1>I ONLTY DID C++ AT UNI SO I DONT KNOW ANY OF THIS STUFF</h1>
+
+<form action="/area">
+	<label>NUMBER:</label>
+	<input id="number" type="number" name="number">
+	<button type="button" onclick="getArea()"> GO BABY</button>
+</form>
+
+<h2 id="result">result: </h2>
+
+</body>
+</html>
